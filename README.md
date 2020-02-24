@@ -71,7 +71,7 @@ This way the sparsity of different "behaviour" groups is accounted for.
 
 The simulation function ties everything together. It uses Timeline to simulate serverInit times (random seed=3), assigns those to users, each user interacts with the app and all their actions are added to a large log which is exported to "simulation_results.csv" in the same format as the original csv except that the time is in hours units
 Here you have the traffic and downloads from the real data (up) and the simulated data (down).
-![Real](https://github.com/lavy91/storemaven-task/blob/master/images/realdata.png)
+![Real](https://github.com/lavy91/storemaven-task/blob/master/images/actualdata.png)
 ![Sim](https://github.com/lavy91/storemaven-task/blob/master/images/simdata.png)
 
 
