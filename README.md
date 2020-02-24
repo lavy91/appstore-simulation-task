@@ -4,9 +4,9 @@ The pipeline is comprised of 4 main parts:
 ## Pre-processing (tools.py)
 In order to extract useful data from the csv given to me, some pre-processing had to be done:
 1. Loading our data and re-labeling our user IDs and store IDs so that the names won't be as long.
-![Raw data](https://github.com/lavy91/storemaven-task/blob/master/dfraw.png)
+![Raw data](https://github.com/lavy91/storemaven-task/blob/master/images/dfraw.png)
 2. Transform our raw data by grouping by userId, make "dummy variables" for each possible action and sum them for each user.
-![New data](https://github.com/lavy91/storemaven-task/blob/master/dfchanged.png)
+![New data](https://github.com/lavy91/storemaven-task/blob/master/images/dfchanged.png)
 
 3. Once we've done that, we can create a column that sums up all of the "active" actions, and this way easily filter out the invalid users using this formula:
 
@@ -20,8 +20,8 @@ a user that scrolled the app page, didn't scroll the gallery, opened the reviews
 
 5. Making a column to represent the hour of the day and weekend status:
 There seems to be a spike in the traffic and CVR during weekeends, this needs to be represented in our simulator.
-![CVR weekend](https://github.com/lavy91/storemaven-task/blob/master/weekendcvr.png)
-![Traffic weekend](https://github.com/lavy91/storemaven-task/blob/master/weekendtraffic.png)
+![CVR weekend](https://github.com/lavy91/storemaven-task/blob/master/images/weekendcvr.png)
+![Traffic weekend](https://github.com/lavy91/storemaven-task/blob/master/images/weekendtraffic.png)
 
 
 6. The traffic rates change during different times of the day, we extract the average traffic rates for each hour of the day during weekdays and weekend (lambdasVecWeekday, lambdasVecWeekend)
@@ -69,10 +69,10 @@ This way the sparsity of different "behaviour" groups is accounted for.
 
 ## The Simulation Function (simulation.py)
 
-The simulation function ties everything together. It uses Timeline to simulate serverInit times (random seed=3), assigns those to users, each user interacts with the app and all their actions are added to a large log which is exported to "simulation_results.csv"
+The simulation function ties everything together. It uses Timeline to simulate serverInit times (random seed=3), assigns those to users, each user interacts with the app and all their actions are added to a large log which is exported to "simulation_results.csv" in the same format as the original csv except that the time is in hours units
 Here you have the traffic and downloads from the real data (up) and the simulated data (down).
-![Real](https://github.com/lavy91/storemaven-task/blob/master/realdata.png)
-![Sim](https://github.com/lavy91/storemaven-task/blob/master/simdata.png)
+![Real](https://github.com/lavy91/storemaven-task/blob/master/images/realdata.png)
+![Sim](https://github.com/lavy91/storemaven-task/blob/master/images/simdata.png)
 
 
 ## Questions
