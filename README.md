@@ -1,5 +1,6 @@
 # Simulator Task
-In this task I built a pipeline to simulate users interaction with 3 versions of the same app in an appstore page based on a dataset which includes the following features:
+In this task I built a pipeline to simulate users interaction with 3 versions of the same app in an appstore page based on a dataset representing a 2-week A/B/n test of an app detailing over 89K actions of approximately 14.5K app-store users.
+which includes the following features:
 1.	uId - a user ID string (unique).
 2.	storeId - version ID string (unique).
 3.	action - an action attributed to the user. Actions are either active (e.g. scrolling the page) or passive, in which case they reflect a state of the store for the user at a certain point in time (e.g. loading the store gallery).
