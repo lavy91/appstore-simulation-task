@@ -77,7 +77,8 @@ It also initializes an empty action log to document every action it will do late
 
 - At last we get to the most important action, whether the user has downloaded the app or not, given everything we know about him. We take a Bayesian approach to do this, meaning:
 
-<img src="https://latex.codecogs.com/gif.latex?\inline&space;\dpi{150}&space;\tiny&space;1_{downloaded\&space;app}\sim&space;Ber(p\sim&space;Beta(a=prior_a&plus;evidence_a,b=prior_b&plus;evidence_b))" title="\tiny 1_{downloaded\ app}\sim Ber(p\sim Beta(a=prior_a+evidence_a,b=prior_b+evidence_b))" />
+<img src="https://latex.codecogs.com/gif.latex?\tiny&space;1_{downloaded\&space;app}\sim&space;Ber(p\sim&space;Beta(a=prior_a&plus;evidence_a,b=prior_b&plus;evidence_b))" title="\tiny 1_{downloaded\ app}\sim Ber(p\sim Beta(a=prior_a+evidence_a,b=prior_b+evidence_b))" />
+
 This way the sparsity of different "behaviour" groups is accounted for.
 
 
