@@ -34,6 +34,8 @@ a user that scrolled the app page, didn't scroll the gallery, opened the reviews
 
 5. Making a column to represent the hour of the day and weekend status:
 There seems to be a spike in the traffic and CVR during weekeends, this needs to be represented in our simulator.
+
+
 ![CVR weekend](https://github.com/lavy91/storemaven-task/blob/master/images/weekendcvr.png)
 ![Traffic weekend](https://github.com/lavy91/storemaven-task/blob/master/images/weekendtraffic.png)
 
