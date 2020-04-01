@@ -1,5 +1,10 @@
 # Simulator Task
-In this task I built a simulation pipeline to mimic users interaction with 3 versions of the same app in an appstore page.
+In this task I built a pipeline to simulate users interaction with 3 versions of the same app in an appstore page based on a dataset which includes the following features:
+1.	uId - a user ID string (unique).
+2.	storeId - version ID string (unique).
+3.	action - an action attributed to the user. Actions are either active (e.g. scrolling the page) or passive, in which case they reflect a state of the store for the user at a certain point in time (e.g. loading the store gallery).
+4.	eventTime - timestamp for the action.
+
 The pipeline is comprised of 4 main parts:
 ## Pre-processing (tools.py)
 In order to extract useful data from the csv given to me, some pre-processing had to be done:
@@ -76,10 +81,10 @@ Here you have the traffic and downloads from the real data (up) and the simulate
 
 
 ## Questions
-1.	If there’s already a process for A/B/n testing (e.g. StoreIQ) what’s the point of experimenting with other algorithms?
-- Just because we have a process in place for A/B/n testing, doesn't mean other algorithms can't preform better economically, i.e. reach similar levels of accuracy with a smaller sample size or that certain aspects of these algorithms can be incorporated to improve StoreIQ.
+1.	If there’s already a process for A/B/n testing what’s the point of experimenting with other algorithms?
+- Just because we have a process in place for A/B/n testing, doesn't mean other algorithms can't preform better economically, i.e. reach similar levels of accuracy with a smaller sample size or that certain aspects of these algorithms can be incorporated to improve our existing process.
 2. The optimal procedure would score best on these following criteria, all weighted according to the current economics (cost of traffic, computing cost, etc.):
-- Highest accuracy in determining store with highest CVR
+- Highest accuracy in determining version with highest CVR
 - Lowest algorithm development cost
 - Lowest deployment cost
 - Smallest sample size needed
@@ -87,6 +92,6 @@ Here you have the traffic and downloads from the real data (up) and the simulate
 3. Given an A/B/n testing statistical procedure and a simulation mechanism, describe the steps you would follow in order to assess the usefulness of the procedure?
 
 - Given a statistical procedure we can run a certain A/B/n test.
-- Feed the test data in the simulator to simulate this test a large number of times (lets say 100,000)
-- Check in how many of these simulations the statistical procedure agreed with the simulation in regards to which store has the highest CVR.
+- Feed the test data in the simulator to simulate this test a large number of times (lets say 100,000).
+- Check in how many of these simulations the statistical procedure agreed with the simulation in regards to which version has the highest CVR.
 - Check how this changes with different cut-off times for the test. Perhaps we could have stopped the test much sooner.
