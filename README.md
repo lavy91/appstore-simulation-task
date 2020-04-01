@@ -3,6 +3,15 @@ In this task I built a pipeline to simulate users interaction with 3 versions of
 1.	uId - a user ID string (unique).
 2.	storeId - version ID string (unique).
 3.	action - an action attributed to the user. Actions are either active (e.g. scrolling the page) or passive, in which case they reflect a state of the store for the user at a certain point in time (e.g. loading the store gallery).
+Possible actions include:
+-	serverInit - a request to load the store variation page (the variation is loaded in a browser). This action is prompted when a user clicks on the link that redirects to the test. Each user that clicks on the ad costs money for the client running the test. Note that clicking on an ad doesn’t guarantee that the user saw the page as he/she may close it before any assets are loaded.
+-	viewAppPage - indicates that a user was exposed to all “first impression” assets of the store.
+-	appRedirect - when a user clicks on the install/get button.
+-	appPageScroll - when a user scrolls the page vertically.
+-	galleryScroll - when a user scrolls the gallery (horizontally).
+-	rmd - “read more description” when a user opens the app description.
+-	openReviews - when a user opens the reviews section.
+
 4.	eventTime - timestamp for the action.
 
 The pipeline is comprised of 4 main parts:
